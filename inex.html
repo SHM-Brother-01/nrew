@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoolCare AC Services | AC Repair & Installation in Lahore</title>
+<meta name="description" content="CoolCare AC Services Lahore: AC repair, installation, gas refilling, cleaning and maintenance at your doorstep.">
+<style>
+:root{--navy:#0b2447;--navy2:#19376d;--blue:#2f6fed;--light:#eef3fb;--text:#1d2939;--muted:#5b6b82;--white:#fff;--green:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 18px}
+section{padding:60px 0}
+h1,h2,h3{color:var(--navy);line-height:1.2}
+h2{font-size:1.9rem;text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:.2s}
+.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#1f58c9}
+.btn-wa{background:var(--green);color:#fff}.btn-wa:hover{background:#1ebe5a}
+.btn-outline{border-color:#fff;color:#fff}.btn-outline:hover{background:#fff;color:var(--navy)}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{color:#fff;font-weight:800;font-size:1.25rem;letter-spacing:.3px}
+.logo span{color:#7fb0ff}
+nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+nav a{color:#dbe6ff;font-weight:500}nav a:hover{color:#fff}
+.nav-call{background:var(--blue);color:#fff!important;padding:8px 16px;border-radius:8px}
+.burger{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px}
+.burger span{display:block;height:3px;background:#fff;margin:6px 8px;border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:70px 0}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.hero h1{color:#fff;font-size:2.6rem;margin-bottom:14px}
+.hero p{color:#cfdcf7;font-size:1.1rem;margin-bottom:24px;max-width:520px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.badge{display:inline-block;background:rgba(255,255,255,.12);padding:6px 14px;border-radius:30px;font-size:.85rem;margin-bottom:16px}
+.stats{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px;text-align:center}
+.stats b{display:block;font-size:1.8rem;color:#7fb0ff}
+.stats small{color:#cfdcf7}
+
+/* Services */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;border:1px solid #dde6f4;border-radius:14px;padding:24px;box-shadow:0 4px 14px rgba(11,36,71,.06);display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(11,36,71,.12)}
+.icon{font-size:2rem;background:var(--light);width:56px;height:56px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.card h3{margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.price{margin:14px 0;font-weight:700;color:var(--blue);font-size:1.05rem}
+.card .btn{padding:9px 14px;font-size:.92rem}
+.bg-light{background:var(--light)}
+
+/* Why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.why div{background:#fff;border-radius:12px;padding:20px;text-align:center;border:1px solid #dde6f4}
+.why .icon{margin:0 auto 10px}
+.why h3{font-size:1.05rem;margin-bottom:4px}
+.why p{font-size:.9rem;color:var(--muted)}
+
+/* Reviews */
+.stars{color:#f5a623;letter-spacing:2px;margin-bottom:8px}
+.review p{font-style:italic;margin-bottom:12px;flex:1;color:var(--text)}
+.review b{color:var(--navy)}.review small{display:block;color:var(--muted)}
+
+/* Booking */
+.book-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start}
+.book-info{background:var(--navy);color:#fff;border-radius:16px;padding:28px}
+.book-info h3{color:#fff;margin-bottom:12px}
+.book-info p{color:#cfdcf7;margin-bottom:10px}
+.book-info ul{list-style:none;margin-top:14px}
+.book-info li{padding:6px 0;border-top:1px solid rgba(255,255,255,.15);color:#e6eeff}
+form{background:#fff;border:1px solid #dde6f4;border-radius:16px;padding:26px;box-shadow:0 4px 14px rgba(11,36,71,.06)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:600;font-size:.9rem;margin:12px 0 5px;color:var(--navy)}
+input,select,textarea{width:100%;padding:11px 12px;border:1.5px solid #cdd8ea;border-radius:9px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,111,237,.15)}
+form .btn{width:100%;margin-top:18px;padding:14px}
+.note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:10px}
+
+/* Footer */
+footer{background:var(--navy);color:#cfdcf7;padding:40px 0 20px}
+.foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+footer h4{color:#fff;margin-bottom:10px}
+footer a{display:block;padding:3px 0}footer a:hover{color:#fff}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.15);margin-top:26px;padding-top:16px;font-size:.85rem}
+
+/* Floating buttons */
+.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:60}
+.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.float .f-call{background:var(--blue)}.float .f-wa{background:var(--green)}
+
+@media(max-width:820px){
+  .burger{display:block}
+  nav{position:absolute;top:64px;left:0;right:0;background:var(--navy2);max-height:0;overflow:hidden;transition:max-height .3s}
+  nav.open{max-height:380px}
+  nav ul{flex-direction:column;gap:0;padding:8px 18px 16px;align-items:stretch}
+  nav li a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-call{text-align:center;margin-top:10px}
+  .hero{padding:44px 0}.hero h1{font-size:2rem}
+  .hero-grid,.book-wrap{grid-template-columns:1fr}
+  section{padding:44px 0}
+  .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">❄️ Cool<span>Care</span> AC</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a class="nav-call" href="tel:+923000000000">📞 Call Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">📍 Serving all of Lahore</span>
+      <h1>Fast, Reliable AC Service at Your Doorstep</h1>
+      <p>Expert technicians for AC repair, installation, gas refilling, cleaning and maintenance. Same-day service, honest prices and a service warranty.</p>
+      <div class="hero-btns">
+        <a class="btn btn-primary" href="#booking">Book a Service</a>
+        <a class="btn btn-wa" href="https://wa.me/923000000000?text=Hello%20CoolCare%20AC%20Services%2C%20I%20need%20help%20with%20my%20AC." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+        <a class="btn btn-outline" href="tel:+923000000000">📞 +92 300 0000000</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b>5,000+</b><small>Happy Customers</small></div>
+      <div><b>4.8★</b><small>Average Rating</small></div>
+      <div><b>60 min</b><small>Avg. Response</small></div>
+      <div><b>30 days</b><small>Service Warranty</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="sub">Transparent sample prices in PKR. Final price is confirmed after inspection.</p>
+    <div class="grid">
+      <div class="card"><div class="icon">🔧</div><h3>AC Repair</h3><p>Diagnosis and repair of cooling issues, water leakage, noise, PCB and compressor faults.</p><div class="price">From Rs. 1,500</div><a class="btn btn-primary" href="#booking" data-service="AC Repair">Book Repair</a></div>
+      <div class="card"><div class="icon">🛠️</div><h3>AC Installation</h3><p>Professional installation of split and window ACs with pipe fitting and safe wiring.</p><div class="price">From Rs. 4,000</div><a class="btn btn-primary" href="#booking" data-service="AC Installation">Book Installation</a></div>
+      <div class="card"><div class="icon">⛽</div><h3>Gas Refilling</h3><p>Leak check and refilling with R22, R410A or R32 gas to restore full cooling.</p><div class="price">From Rs. 3,500</div><a class="btn btn-primary" href="#booking" data-service="Gas Refilling">Book Refill</a></div>
+      <div class="card"><div class="icon">🧼</div><h3>AC Cleaning</h3><p>Deep jet-wash cleaning of indoor and outdoor units for fresh, efficient airflow.</p><div class="price">From Rs. 2,000</div><a class="btn btn-primary" href="#booking" data-service="AC Cleaning">Book Cleaning</a></div>
+      <div class="card"><div class="icon">📅</div><h3>Maintenance Plan</h3><p>Seasonal checkups with priority support. Keep your AC running smoothly all year.</p><div class="price">Rs. 6,000 / year</div><a class="btn btn-primary" href="#booking" data-service="Maintenance Plan">Book Plan</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light" id="why">
+  <div class="container">
+    <h2>Why Choose CoolCare?</h2>
+    <p class="sub">Trusted by homes and offices across Lahore.</p>
+    <div class="why">
+      <div><div class="icon">⏱️</div><h3>Same-Day Service</h3><p>Quick visits across DHA, Gulberg, Johar Town and more.</p></div>
+      <div><div class="icon">👨‍🔧</div><h3>Trained Technicians</h3><p>Verified, experienced and polite professionals.</p></div>
+      <div><div class="icon">💰</div><h3>Fair Pricing</h3><p>No hidden charges. Price shared before work starts.</p></div>
+      <div><div class="icon">🛡️</div><h3>Warranty</h3><p>30-day warranty on service and genuine parts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2>Customer Reviews</h2>
+    <p class="sub">Sample reviews from our happy customers.</p>
+    <div class="grid">
+      <div class="card review"><div class="stars">★★★★★</div><p>Technician arrived within an hour and fixed my AC’s water leakage. Very professional and fairly priced.</p><b>Ahmed Raza</b><small>Gulberg, Lahore</small></div>
+      <div class="card review"><div class="stars">★★★★★</div><p>Excellent installation of my new inverter AC. Neat pipe work and clear explanation. Highly recommended!</p><b>Sana Malik</b><small>DHA Phase 5, Lahore</small></div>
+      <div class="card review"><div class="stars">★★★★☆</div><p>Gas refilling and cleaning done in one visit. Cooling is much better now. Good value for money.</p><b>Usman Tariq</b><small>Johar Town, Lahore</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light" id="booking">
+  <div class="container">
+    <h2>Book Your Service</h2>
+    <p class="sub">Fill in the form and your details will open in WhatsApp, ready to send to us.</p>
+    <div class="book-wrap">
+      <div class="book-info">
+        <h3>Get in Touch</h3>
+        <p>📞 <a href="tel:+923000000000"><b>+92 300 0000000</b></a></p>
+        <p>💬 WhatsApp: +92 300 0000000</p>
+        <p>📍 Main Boulevard, Gulberg III, Lahore (demo address)</p>
+        <ul>
+          <li>🕘 Mon–Sat: 9:00 AM – 9:00 PM</li>
+          <li>🕙 Sunday: 10:00 AM – 6:00 PM</li>
+          <li>🚨 Emergency calls accepted</li>
+        </ul>
+      </div>
+      <form id="bookingForm" novalidate>
+        <div class="row">
+          <div><label for="name">Full Name *</label><input id="name" required placeholder="e.g. Ali Khan"></div>
+          <div><label for="phone">Phone Number *</label><input id="phone" type="tel" required placeholder="e.g. 0300 1234567"></div>
+        </div>
+        <div class="row">
+          <div><label for="service">Service *</label>
+            <select id="service" required>
+              <option value="">Select a service</option>
+              <option>AC Repair (from Rs. 1,500)</option>
+              <option>AC Installation (from Rs. 4,000)</option>
+              <option>Gas Refilling (from Rs. 3,500)</option>
+              <option>AC Cleaning (from Rs. 2,000)</option>
+              <option>Maintenance Plan (Rs. 6,000 / year)</option>
+            </select></div>
+          <div><label for="ac">AC Type</label>
+            <select id="ac"><option>Split AC</option><option>Inverter AC</option><option>Window AC</option><option>Cassette / Floor Standing</option></select></div>
+        </div>
+        <div class="row">
+          <div><label for="date">Preferred Date *</label><input id="date" type="date" required></div>
+          <div><label for="time">Preferred Time</label>
+            <select id="time"><option>Morning (9 AM – 12 PM)</option><option>Afternoon (12 PM – 4 PM)</option><option>Evening (4 PM – 8 PM)</option></select></div>
+        </div>
+        <label for="address">Address / Area in Lahore *</label>
+        <input id="address" required placeholder="e.g. House 12, Street 5, Model Town, Lahore">
+        <label for="msg">Problem Details (optional)</label>
+        <textarea id="msg" rows="3" placeholder="e.g. AC is not cooling properly"></textarea>
+        <button class="btn btn-wa" type="submit">💬 Send Booking on WhatsApp</button>
+        <p class="note">Demo form: this opens WhatsApp with your details pre-filled.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div><h4>❄️ CoolCare AC Services</h4><p>Professional AC repair, installation and maintenance in Lahore, Pakistan.</p></div>
+      <div><h4>Quick Links</h4><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#booking">Book Now</a></div>
+      <div><h4>Contact</h4><a href="tel:+923000000000">📞 +92 300 0000000</a><a href="https://wa.me/923000000000" target="_blank" rel="noopener">💬 WhatsApp</a><a href="#booking">📍 Gulberg III, Lahore</a></div>
+    </div>
+    <div class="copy">© <span id="year"></span> CoolCare AC Services. Demo website with sample data.</div>
+  </div>
+</footer>
+
+<div class="float">
+  <a class="f-call" href="tel:+923000000000" aria-label="Call us">📞</a>
+  <a class="f-wa" href="https://wa.me/923000000000?text=Hello%20CoolCare%20AC%20Services" target="_blank" rel="noopener" aria-label="WhatsApp us">💬</a>
+</div>
+
+<script>
+const WA_NUMBER = "923000000000"; // Replace with your real number (no + or spaces)
+
+// Mobile menu
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+burger.addEventListener("click", () => {
+  const open = menu.classList.toggle("open");
+  burger.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
+});
+menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  menu.classList.remove("open");
+  burger.classList.remove("open");
+  burger.setAttribute("aria-expanded", "false");
+}));
+
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Date: no past dates
+const dateInput = document.getElementById("date");
+dateInput.min = new Date().toISOString().split("T")[0];
+
+// Service buttons preselect the service
+document.querySelectorAll("[data-service]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const sel = document.getElementById("service");
+    for (const opt of sel.options) {
+      if (opt.text.startsWith(btn.dataset.service)) { sel.value = opt.text; break; }
+    }
+  });
+});
+
+// Booking form -> WhatsApp
+document.getElementById("bookingForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const required = ["name", "phone", "service", "date", "address"];
+  let ok = true;
+  required.forEach(id => {
+    const el = document.getElementById(id);
+    const bad = !el.value.trim();
+    el.style.borderColor = bad ? "#e11d48" : "";
+    if (bad) ok = false;
+  });
+  if (!ok) { alert("Please fill in all required fields."); return; }
+
+  const text =
+`*New AC Service Booking – CoolCare*
+👤 Name: ${v("name")}
+📞 Phone: ${v("phone")}
+🔧 Service: ${v("service")}
+❄️ AC Type: ${v("ac")}
+📅 Date: ${v("date")}
+🕘 Time: ${v("time")}
+📍 Address: ${v("address")}
+📝 Details: ${v("msg") || "N/A"}`;
+
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+});
+</script>
+</body>
+</html>
